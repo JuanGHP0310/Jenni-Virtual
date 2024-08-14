@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
             obstaclesAvoided++;
             scoreDisplay.textContent = 'Puntuación: ' + obstaclesAvoided;
             if (obstaclesAvoided >= maxObstacles) {
-                alert('¡Felicidades mi amoor! Exactamente así es como te he visto, superando todo lo negativo. Podemos lograr todo lo que nos propongamos y así será. Nos haremos más fuertes, mejores y podremos ser cada vez más felices juntos. ¡Y has ganado un regalo!');
+                alert('¡Felicidades mi amoor! Exactamente así es como te he visto, superando todo lo negativo, convirtiéndolo en positivo para aprender y mejorar. Podemos lograr todo lo que nos propongamos y así será. Nos haremos más fuertes, mejores y podremos ser cada vez más felices juntos. Y muy importante: ¡has ganado otro regalo!');
                 document.location.reload();
             }
         });
