@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Esquivar Obstáculos</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to bottom, #74ebd5, #acb6e5);
+            font-family: 'Arial', sans-serif;
+        }
+        .game-container {
+            position: relative;
+            width: 800px;
+            height: 200px;
+            overflow: hidden;
+            border: 2px solid #333;
+            border-radius: 10px;
+            background-image: url('fondo.jpg');
+            background-size: cover;
+            background-position: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .character {
+            position: absolute;
+            bottom: 0;
+            width: 50px;
+            height: 180px; /* Doble de largo */
+            background-image: url('chica_transparente.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .obstacle {
+            position: absolute;
+            bottom: 0;
+            background-color: #e74c3c;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 5px 10px;
+            font-size: 16px;
+            font-family: Arial, sans-serif;
+            white-space: nowrap;
+            animation: move 2s linear infinite;
+            border-radius: 5px;
+        }
+        @keyframes move {
+            from {
+                right: -50px;
+            }
+            to {
+                right: 100%;
+            }
+        }
+        .score {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 20px;
+            color: #fff;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <div class="character" id="character"></div>
+        <div class="score" id="score"></div>
+    </div>
+
+    <script src="Dodge.js"></script>
+</body>
+</html>
